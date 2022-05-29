@@ -503,7 +503,7 @@ document.getElementById("WheelParent").onmouseleave=mouseUp;
 
 var pal, palp;
   var x=document.getElementById('main');
-  cPM(x);
-  cPShow(x);
-  createPalette(x);
+ // cPM(x);
+  //cPShow(x);
+  //createPalette(x);
 }
