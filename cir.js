@@ -492,6 +492,8 @@ function createPalette(x)
   xhr.open ( "GET", "/palg?x="+random() ) ;
   xhr.send() ;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
 createCircle(document.getElementById("main"));
 var colorCanvas = document.getElementById('ColorWheel');
 const ColorCtx = colorCanvas.getContext('2d'); 
@@ -504,3 +506,4 @@ var pal, palp;
   cPM(x);
   cPShow(x);
   createPalette(x);
+}
