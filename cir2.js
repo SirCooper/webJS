@@ -506,4 +506,4 @@ var pal, palp;
  // cPM(x);
   //cPShow(x);
   //createPalette(x);
-}
+});
