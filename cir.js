@@ -459,7 +459,7 @@ function createPalette(x)
       for(var i=0; i<resp.length;i++)
       {
         var nP = document.createElement('h4');
-        nP.innerHTML=resp[i]name;
+        nP.innerHTML=resp[i].name;
         var nN = document.createElement('pp');
         nN.appendChild(nP);
         nN.appendChild(document.createElement('br'));
@@ -467,18 +467,18 @@ function createPalette(x)
         nN.appendChild(nP);
         nP.setAttribute('class','pic');
         var text = "linear-gradient(to right,";
-        for (var ii = 0; ii < resp[i]value.length/4; ii++)
+        for (var ii = 0; ii < resp[i].value.length/4; ii++)
         {
           text += "rgb("
           for( var iii=1; iii<4; iii++)
           {
-            text += resp[i]value[ii*4+iii];
+            text += resp[i].value[ii*4+iii];
             if(iii<3) text += ",";
             else text += ")";
           }
-          text += resp[i]value[ii*4];
+          text += resp[i].value[ii*4];
           text += "%";
-          if(ii<resp[i]value.length/4-1)text += ",";
+          if(ii<resp[i].value.length/4-1)text += ",";
         }
         text += ")";
         nP.style.backgroundImage = text;
