@@ -7,7 +7,7 @@ var palettenames= [
 "Aurora","Atlantica","C9 2","C9 New","Temperature","Aurora 2"
 ];
 
-var palettes=[
+var palettevalues=[
 [
     0, 120,  0,  0,
    22, 179, 22,  0,
