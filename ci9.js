@@ -534,10 +534,6 @@ function createPalette(x)
         var count =document.getElementsByClassName('pshow');if(activeP[0]!==0)count=document.querySelector('.pn');
         if(count)count[activePalette].style.backgroundImage=e.target.querySelector('cp').style.backgroundImage;});
       }
-    }
-  }
-  xhr.open ( "GET", "/palg?x="+Math.random() ) ;
-  xhr.send() ;
 }
 palettes.value=[];
 palettes.position=[];
