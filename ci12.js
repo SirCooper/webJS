@@ -24,7 +24,7 @@ class _rgb {
 var main_rgb=new _rgb();
 var palettes={};
 var millis= new Date().getTime();
-var activPalette;
+var activePalette;
 const arrayPointer= {};
 arrayPointer[0]=0;
 arrayPointer[1]=6;
