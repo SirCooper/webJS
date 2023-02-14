@@ -24,7 +24,7 @@ class _rgb {
 var main_rgb=new _rgb();
 var palettes={};
 var millis= new Date().getTime();
-var activPalette;
+var activePalette;
 const arrayPointer= {};
 arrayPointer[0]=0;
 arrayPointer[1]=6;
@@ -408,7 +408,7 @@ function cPM(x)
           fP.style.marginTop='5px';
           fP.style.width =div.clientWidth/8+'px';  
       
-          fP.addEventListener('click',cph());
+          fP.addEventListener('click',cph);
       }
     div.style.display='none';
   }
@@ -451,7 +451,7 @@ function changePalette(e){
     }
   }
 }
-function cpq(){
+function cpq(e){
 var px = document.querySelector('.activeP');
 if(px!==null)px.classList.remove('activeP');
 if(document.querySelector('cpcp'))
@@ -474,7 +474,7 @@ if(document.querySelector('cpcp'))
 this.classList.add('activeP')
 px = this.parentNode.childNodes;
 var i2=i;
-for(var i=0;i<32;i++){if(px[i]==this)i2=i};    
+for(var i=0;i<px.length;i++){if(px[i]==this)i2=i;};    
 activeP[1]=i2;
 }
 function cph()
@@ -503,11 +503,14 @@ document.getElementsByTagName('psp')[3-i].style.display='none'
 }
 function createPalette(x)
 {
+  var y=document.createElement('mmain');
+  x.appendChild(y);
       for(var i=0; i<palettevalues.length;i++)
       {
         var nP = document.createElement('h4');
         nP.innerHTML=palettenames[i];
-        var nN = document.createElement('pp');
+        var nN = document.createElement('div');
+        nN.style.width='25%';
         nN.appendChild(nP);
         nN.appendChild(document.createElement('br'));
         nP = document.createElement('cp');
@@ -529,10 +532,10 @@ function createPalette(x)
         }
         text += ")";
         nP.style.backgroundImage = text;
-        x.appendChild(nN);
-        nN.addEventListener('click',function(){fire(5,i);
-        var count =document.getElementsByClassName('pshow');if(activeP[0]!==0)count=document.querySelector('.pn');
-        if(count)count[activePalette].style.backgroundImage=e.target.querySelector('cp').style.backgroundImage;});
+        y.appendChild(nN);
+        nN.addEventListener('click',function(){var cng=this.parentNode.children; for(i=0;i<cng.length;i++)if(cng[i]==this)fire(5,i);
+        var count =document.querySelector('.activeP');
+        if(count)count.style.backgroundImage=this.querySelector('cp').style.backgroundImage;});
       }
 }
 palettes.value=[];
