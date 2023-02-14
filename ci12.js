@@ -451,7 +451,7 @@ function changePalette(e){
     }
   }
 }
-function cpq(){
+function cpq(e){
 var px = document.querySelector('.activeP');
 if(px!==null)px.classList.remove('activeP');
 if(document.querySelector('cpcp'))
