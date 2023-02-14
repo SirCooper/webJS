@@ -474,7 +474,7 @@ if(document.querySelector('cpcp'))
 this.classList.add('activeP')
 px = this.parentNode.childNodes;
 var i2=i;
-for(var i=0;i<32;i++){if(px[i]==this)i2=i};    
+for(var i=0;i<px.length;i++){if(px[i]==this)i2=i;};    
 activeP[1]=i2;
 }
 function cph()
