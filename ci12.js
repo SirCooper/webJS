@@ -533,9 +533,9 @@ function createPalette(x)
         text += ")";
         nP.style.backgroundImage = text;
         y.appendChild(nN);
-        nN.addEventListener('click',function(){fire(5,i);
-        var count =document.getElementsByClassName('pshow');if(activeP[0]!==0)count=document.querySelector('.pn');
-        if(count)count[activePalette].style.backgroundImage=e.target.querySelector('cp').style.backgroundImage;});
+        nN.addEventListener('click',function(){var cng=this.parentNode.children; for(i=0;i<cng.length;i++)if(cng[i]==this)fire(5,i);
+        var count =document.querySelector('.activeP');
+        if(count)count.style.backgroundImage=this.querySelector('cp').style.backgroundImage;});
       }
 }
 palettes.value=[];
