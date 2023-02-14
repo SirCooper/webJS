@@ -408,7 +408,7 @@ function cPM(x)
           fP.style.marginTop='5px';
           fP.style.width =div.clientWidth/8+'px';  
       
-          fP.addEventListener('click',cph());
+          fP.addEventListener('click',cph);
       }
     div.style.display='none';
   }
